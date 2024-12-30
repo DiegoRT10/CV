@@ -1,0 +1,15 @@
+services:
+  frontend-angular-cv:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "4200:4200"
+    volumes:
+      - ./:/usr/src/app
+    command: ng serve --host 0.0.0.0 --poll 2000
+    stdin_open: true
+    tty: true
+    container_name: frontend-mecv-app
+    environment:
+      - NG_CLI_ANALYTICS=false
