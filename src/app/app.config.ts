@@ -6,7 +6,7 @@ import { routes } from './app.routes';
 //PrimeNG
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { providePrimeNG } from 'primeng/config';
-import Material from '@primeng/themes/material';
+import MaterialCyanOrangePreset from '../themes/material-cyan-orange-preset';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -15,12 +15,9 @@ export const appConfig: ApplicationConfig = {
     provideAnimationsAsync(),
         providePrimeNG({ 
             theme: {
-                preset: Material,
+                preset: MaterialCyanOrangePreset,
                 options: {
-                  cssLayer: {
-                    name: 'primeng',
-                    order: 'tailwind-base, primeng, tailwind-utilities',
-                  },
+                  
                 },
             },
             ripple: true,
