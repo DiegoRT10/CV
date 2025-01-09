@@ -18,7 +18,7 @@ Angular, NodeJs, SQL, Nginx, Jenkins, Ansible,
 Docker entre otros.
             </p>
             
-            <button pButton label="Vista Completa" class="mr-3 p-button-raised"></button>
+            <button pButton label="Vista Completa" class="mr-3 p-button-raised" (click)="focusExperience()"></button>
             <button pButton label="Vista por items" class="p-button-outlined"></button>
 
         </section>
@@ -27,3 +27,8 @@ Docker entre otros.
         <img src="../../../assets/img/me.jpeg" alt="Image" class="md:ml-auto block md:h-full" style="clip-path: polygon(8% 0, 100% 0%, 100% 100%, 0 100%)">
     </div>
 </div>
+
+<br>
+
+
+    <app-experience #experienceSection [hidden]="!viewComplet"></app-experience>
