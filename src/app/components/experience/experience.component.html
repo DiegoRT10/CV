@@ -1,19 +1,23 @@
-<div class="card">
-    <p-timeline [value]="events" align="alternate" styleClass="customized-timeline">
+
+<h1 class="text-center font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl">Experiencia</h1>
+    <br>
+    <p-timeline [value]="dataExperience" align="alternate" styleClass="customized-timeline">
         <ng-template #marker let-event>
             <span class="flex w-8 h-8 items-center justify-center text-white rounded-full z-10 shadow-sm" [style]="{ 'background-color': event.color }">
-                <i [class]="event.icon"></i>
+                <!-- <i [class]="event.icon"></i> -->
             </span>
         </ng-template>
-        <ng-template #content let-event>
-            <p-card [header]="event.status" [subheader]="event.date">
-                <img *ngIf="event.image" [src]="'https://primefaces.org/cdn/primeng/images/demo/product/' + event.image" [alt]="event.name" width="200" class="shadow" />
+        <ng-template #content let-data>
+            <p-card class="custom-card">
+                <ng-template #title> {{data.Puesto}} </ng-template>
+                <ng-template #subtitle> {{data.Tiempo}} </ng-template>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
-                    neque quas!
+                    {{data.Descripcion}}
                 </p>
-                <p-button label="Read more" [text]="true" />
+                <a [href]="'mailto:' + data.Referencia" class="text-[rgb(103,232,249)]">
+                    {{data.Referencia}}
+                </a>
             </p-card>
         </ng-template>
     </p-timeline>
-</div>
+

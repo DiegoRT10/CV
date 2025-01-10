@@ -4,12 +4,12 @@ import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 
 
-interface EventItem {
-  status?: string;
-  date?: string;
-  icon?: string;
-  color?: string;
-  image?: string;
+interface Experience {
+  Puesto: string;
+  Institucion: string;
+  Tiempo: string
+  Descripcion: string;
+  Referencia: string;
 }
 
 
@@ -21,17 +21,44 @@ interface EventItem {
     ButtonModule
   ],
   templateUrl: './experience.component.html',
-  styleUrl: './experience.component.scss'
+  styleUrl: './experience.component.scss',
+  
 })
 export class ExperienceComponent {
-  events: EventItem[];
+  dataExperience: Experience[] = [];
 
   constructor() {
-      this.events = [
-          { status: 'Ordered', date: '15/10/2020 10:30', icon: 'pi pi-shopping-cart', color: '#9C27B0', image: 'game-controller.jpg' },
-          { status: 'Processing', date: '15/10/2020 14:00', icon: 'pi pi-cog', color: '#673AB7' },
-          { status: 'Shipped', date: '15/10/2020 16:15', icon: 'pi pi-shopping-cart', color: '#FF9800' },
-          { status: 'Delivered', date: '16/10/2020 10:00', icon: 'pi pi-check', color: '#607D8B' }
+      this.dataExperience = [
+          {
+            Puesto: 'Analista de sistemas',
+            Institucion: 'Corporación SALOM S.A',
+            Tiempo: 'Junio 2022 - Noviembre 2023',
+            Descripcion: `He desarrollado sistemas de facturación,
+control de cheques, control de pedidos a
+bodega, sistema de evaluación, app de
+seguimiento de rutas. Migración de sistema de
+control de ventas de php a Angular y NodeJs`,
+            Referencia: 'infofarmacia1@gmail.com'},
+          {
+            Puesto: 'Developer Frontend',
+            Institucion: 'CUNORI',
+            Tiempo: 'Enero 2024 - Noviembre 2024',
+            Descripcion: `Se trabajo en un proyecto para controlar la
+carga académica del Centro Universitario de
+Oriente CUNORI`,
+            Referencia: 'hendrick.calderon@cunori.edu.gt'
+          },
+          {
+            Puesto: 'Auxiliar de investigación',
+            Institucion: 'DIGI-USAC',
+            Tiempo: 'Julio 2024 - Diciembre 2024',
+            Descripcion: `Ayuda parcial en el diseño de los módulos de
+unidades y equipos de investigación para el
+Sistema de Gestión de la Investigación de la
+USAC (Sigi)`,
+            Referencia: 'spinto@cunori.edu.gt'
+          }
+          
       ];
   }
 }

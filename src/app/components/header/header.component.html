@@ -31,4 +31,14 @@ Docker entre otros.
 <br>
 
 
-    <app-experience #experienceSection [hidden]="!viewComplet"></app-experience>
+    <app-experience 
+    #experienceSection 
+    [hidden]="!viewComplet"
+    pAnimateOnScroll
+    enterClass="animate-zoomin"
+    leaveClass="animate-fadeout"
+    class="animate-duration-1000"
+    >
+    </app-experience>
+
+    
