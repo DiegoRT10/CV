@@ -1,0 +1,13 @@
+.custom-steplist {
+    display: flex !important;
+    justify-content: center !important; /* Centrar horizontalmente */
+    align-items: center !important;    /* Centrar verticalmente */
+    gap: 1rem !important;              /* Espaciado uniforme entre elementos */
+}
+
+p-step-list.p-steplist {
+    display: flex !important;
+    justify-content: center !important; /* Centrar horizontalmente */
+    align-items: center !important; /* Centrar verticalmente */
+    gap: 1rem !important; /* Espaciado entre pasos */
+}

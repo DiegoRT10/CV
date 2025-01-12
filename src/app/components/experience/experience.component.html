@@ -3,8 +3,8 @@
     <br>
     <p-timeline [value]="dataExperience" align="alternate" styleClass="customized-timeline">
         <ng-template #marker let-event>
-            <span class="flex w-8 h-8 items-center justify-center text-white rounded-full z-10 shadow-sm" [style]="{ 'background-color': event.color }">
-                <!-- <i [class]="event.icon"></i> -->
+            <span class="flex w-13.5 h-8 items-center justify-center text-white rounded-full z-10 shadow-lg shadow-[rgb(103,232,249)] bg-[rgb(79, 79, 79)]" >
+                <i class="pi pi-check"></i>
             </span>
         </ng-template>
         <ng-template #content let-data>

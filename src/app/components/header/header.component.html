@@ -1,44 +1,33 @@
-
 <div class="grid grid-nogutter surface-section text-800">
-    <div class="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center ">
+    <div class="col-12 md:col-6 text-center md:text-left flex align-items-center ">
         <section>
             <span class="block text-6xl font-bold mb-1">Diego Alexis Ramos Torres</span>
-            <div class="text-6xl text-[rgb(103,232,249)]  font-bold mb-3">Analista de sistemas y Desarrollador Full Stack</div>
+            <div class="text-6xl text-[rgb(103,232,249)]  font-bold mb-3">Analista de sistemas y Desarrollador Full
+                Stack</div>
             <p class="mt-0 mb-4 text-700 line-height-3">
                 Actualmente cuento con cierre de pénsum
-de la carrera de ingeniería en ciencias y
-sistemas CUNORI-USAC, me considero analista
-de sistemas ya que he creado sistemas
-analizando los problemas que tenia cada
-entidad en la que trabaje además me
-considero developer full stack, ya que manejo
-programación del lado del frontend, backend,
-db y CI/CD, he trabajado con tecnologias como:
-Angular, NodeJs, SQL, Nginx, Jenkins, Ansible,
-Docker entre otros.
+                de la carrera de ingeniería en ciencias y
+                sistemas CUNORI-USAC, me considero analista
+                de sistemas ya que he creado sistemas
+                analizando los problemas que tenia cada
+                entidad en la que trabaje además me
+                considero developer full stack, ya que manejo
+                programación del lado del frontend, backend,
+                db y CI/CD, he trabajado con tecnologias como:
+                Angular, NodeJs, SQL, Nginx, Jenkins, Ansible,
+                Docker entre otros.
             </p>
-            
+
             <button pButton label="Vista Completa" class="mr-3 p-button-raised" (click)="focusExperience()"></button>
             <button pButton label="Vista por items" class="p-button-outlined"></button>
 
         </section>
     </div>
     <div class="col-12 md:col-6 overflow-hidden bg-gray-900">
-        <img src="../../../assets/img/me.jpeg" alt="Image" class="md:ml-auto block md:h-full" style="clip-path: polygon(8% 0, 100% 0%, 100% 100%, 0 100%)">
+        <img src="../../../assets/img/me.jpeg" alt="Image" class="md:ml-auto block md:h-full"
+            style="clip-path: polygon(8% 0, 100% 0%, 100% 100%, 0 100%)">
     </div>
 </div>
 
-<br>
 
 
-    <app-experience 
-    #experienceSection 
-    [hidden]="!viewComplet"
-    pAnimateOnScroll
-    enterClass="animate-zoomin"
-    leaveClass="animate-fadeout"
-    class="animate-duration-1000"
-    >
-    </app-experience>
-
-    
