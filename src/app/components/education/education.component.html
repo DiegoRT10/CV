@@ -1,6 +1,8 @@
-<div class="card flex justify-center">
+<h1 class="text-center font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl">Educación</h1>
+<br>
+<div class="card flex justify-center px-2 sm:px-4 lg:px-16">
     <p-stepper [(value)]="activeStep" class="w-full ">
-        <p-step-list>
+        <p-step-list class="flex flex-wrap gap-4 justify-center md:justify-between">
             <p-step [value]="1">
                 <ng-template #content let-activateCallback="activateCallback" let-value="value">
                     <button class="bg-transparent border-0 inline-flex flex-col gap-2" (click)="activateCallback()">
@@ -26,7 +28,7 @@
                                 'border-surface ': value > activeStep
                             }"
                         >
-                            <i class="pi pi-building-columns"></i>
+                            <i class="pi pi-hammer"></i>
                         </span>
                     </button>
                 </ng-template>
@@ -37,11 +39,11 @@
                         <span
                             class="rounded-full border-2 w-16 h-12 inline-flex items-center justify-center"
                             [ngClass]="{
-                                'bg-primary text-primary-contrast border-primary ': value <= activeStep,
+                                'bg-primary text-primary-contrast border-primary shadow-md shadow-[rgb(103,232,249)]': value <= activeStep,
                                 'border-surface ': value > activeStep
                             }"
                         >
-                            <i class="pi pi-hammer"></i>
+                            <i class="pi pi-building-columns"></i>
                         </span>
                     </button>
                 </ng-template>
@@ -51,55 +53,70 @@
         <p-step-panels>
             <p-step-panel [value]="1">
                 <ng-template #content let-activateCallback="activateCallback">
-                    <div class="flex flex-col h-48">
+                    <div class="flex flex-col gap-4 h-auto">
                         <p-card class="custom-card shadow-lg shadow-[rgb(103,232,249)]">
                             <ng-template #title> Instituto Normal para Varones de Oriente INVO</ng-template>
-                            <ng-template #subtitle> 2017-2018 </ng-template>
-                            <p>
-                                estudie aqui xD
+                            <ng-template #subtitle> Enero 2017 - Octubre 2018 </ng-template>
+                            <p class="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">
+                                Graduado estando en el cuadro de honor en la carrera de bachillerato en ciencias y letras con orientación en computación, donde fui galardonado con el botón de oro entregado por Universidad Rafael Landivar.
                             </p>
-                            <a [href]="'mailto:'" class="text-[rgb(103,232,249)]">
-                                invo
-                            </a>
+                            <a href="https://www.facebook.com/INVO.CHIQUIMULA/?locale=es_LA" class="text-[rgb(103,232,249)]">INVO</a>
                         </p-card>
                         </div>
 
                     <div class="flex pt-6 justify-end">
-                        <p-button (onClick)="activateCallback(2)" label="Siguiente" icon="pi pi-arrow-right" iconPos="right" />
+                        <p-button (onClick)="activateCallback(2)" label="Siguiente" icon="pi pi-arrow-right" iconPos="right" class="w-full sm:w-auto sm:h-auto"/>
                     </div>
                 </ng-template>
             </p-step-panel>
 
             <p-step-panel [value]="2">
                 <ng-template #content let-activateCallback="activateCallback">
-                    <div class="flex flex-col h-48">
-                        <div
-                            class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded bg-surface-50 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium"
-                        >
-                            Content II
+                    
+                        <div class="flex flex-col gap-4 h-auto">
+                            <p-card class="custom-card shadow-lg shadow-[rgb(103,232,249)]">
+                                <ng-template #title>Instituto Técnico de Capacitación y
+                                    Productividad INTECAP</ng-template>
+                                <ng-template #subtitle> Abril 2017 - Mayo 2018 </ng-template>
+                                <p class="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">
+                                    Se obtuvo seis diplomas como reparador e instalador de equipo de computo
+                                </p>
+                                <a href="https://intecap.edu.gt/" class="text-[rgb(103,232,249)]">Intecap</a>
+                            </p-card>
+                            <p-card class="custom-card shadow-lg shadow-[rgb(103,232,249)]">
+                                <ng-template #title>Instituto Técnico de Capacitación y
+                                    Productividad INTECAP</ng-template>
+                                <ng-template #subtitle> Julio 2022 - Noviembre 2022 </ng-template>
+                                <p class="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">
+                                    Se obtuvo cuatro diplomas para la formación del idioma ingles
+                                </p>
+                                <a href="https://intecap.edu.gt/" class="text-[rgb(103,232,249)]">Intecap</a>
+                            </p-card>
+                            </div>
+
+                        <div class="flex pt-6 justify-between">
+                            <p-button (onClick)="activateCallback(1)" label="Atrás" severity="secondary" icon="pi pi-arrow-left" class="w-full sm:w-auto sm:h-auto"/>
+                            <p-button (onClick)="activateCallback(3)" label="Siguiente" icon="pi pi-arrow-right" iconPos="right" class="w-full sm:w-auto sm:h-auto"/>
                         </div>
-                    </div>
-                   
-                    <div class="flex pt-6 justify-between">
-                        <p-button (onClick)="activateCallback(1)" label="Atrás" severity="secondary" icon="pi pi-arrow-left" />
-                        <p-button (onClick)="activateCallback(3)" label="Siguiente" icon="pi pi-arrow-right" iconPos="right" />
-                    </div>
                 </ng-template>
             </p-step-panel>
 
             <p-step-panel [value]="3">
                 <ng-template #content let-activateCallback="activateCallback">
-                    <div class="flex flex-col h-48">
-                        <div
-                            class="border-2 border-dashed border-surface-200 dark:border-surface-700 rounded bg-surface-50 dark:bg-surface-950 flex-auto flex justify-center items-center font-medium"
-                        >
-                            Content III
+                    <div class="flex flex-col gap-4 h-auto">
+                        <p-card class="custom-card shadow-lg shadow-[rgb(103,232,249)]">
+                            <ng-template #title>Centro Universitario de Oriente CUNORI</ng-template>
+                            <ng-template #subtitle> Febrero 2019 - Noviembre 2024 </ng-template>
+                            <p class="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">
+                                Actualmente cuento con cierre de pénsum de la carrera de Ingeniería en Ciencias y Sistemas, durante mi estancia participe en varios proyectos en beneficio de la universidad.
+                            </p>
+                            <a href="https://cunori.edu.gt/" class="text-[rgb(103,232,249)]">Cunori</a>
+                        </p-card>
                         </div>
-                    </div>
 
-                    <div class="flex pt-6 justify-start">
-                        <p-button (onClick)="activateCallback(2)" label="Atrás" severity="secondary" icon="pi pi-arrow-left" />
-                    </div>
+                        <div class="flex pt-6 justify-start">
+                            <p-button (onClick)="activateCallback(2)" label="Atrás" severity="secondary" icon="pi pi-arrow-left" class="w-full sm:w-auto sm:h-auto"/>
+                        </div>
                 </ng-template>
             </p-step-panel>
         </p-step-panels>

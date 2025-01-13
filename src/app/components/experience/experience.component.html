@@ -3,21 +3,32 @@
     <br>
     <p-timeline [value]="dataExperience" align="alternate" styleClass="customized-timeline">
         <ng-template #marker let-event>
-            <span class="flex w-13.5 h-8 items-center justify-center text-white rounded-full z-10 shadow-lg shadow-[rgb(103,232,249)] bg-[rgb(79, 79, 79)]" >
-                <i class="pi pi-check"></i>
+            <span 
+                class="flex items-center justify-center text-white rounded-full z-10 shadow-lg shadow-[rgb(103,232,249)] bg-[rgb(79, 79, 79)] 
+                w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14"
+            >
+                <i class="pi pi-check text-sm sm:text-base md:text-lg lg:text-xl"></i>
             </span>
         </ng-template>
         <ng-template #content let-data>
-            <p-card class="custom-card">
-                <ng-template #title> {{data.Puesto}} </ng-template>
-                <ng-template #subtitle> {{data.Tiempo}} </ng-template>
-                <p>
-                    {{data.Descripcion}}
-                </p>
-                <a [href]="'mailto:' + data.Referencia" class="text-[rgb(103,232,249)]">
-                    {{data.Referencia}}
-                </a>
-            </p-card>
+            <div class="flex flex-col mx-auto max-w-full md:max-w-md lg:max-w-lg">
+                <p-card 
+                    class="custom-card p-4 sm:p-6 md:p-8 lg:p-6"
+                >
+                    <ng-template #title> {{ data.Puesto }} </ng-template>
+                    <ng-template #subtitle> {{ data.Tiempo }} </ng-template>
+                    <p class="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">
+                        {{ data.Descripcion }}
+                    </p>
+                    <a 
+                        [href]="'mailto:' + data.Referencia" 
+                        class="text-[rgb(103,232,249)] hover:underline break-words text-sm sm:text-base md:text-lg lg:text-xl"
+                    >
+                        {{ data.Referencia }}
+                    </a>
+                </p-card>
+            </div>
         </ng-template>
     </p-timeline>
+    
 
