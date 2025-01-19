@@ -1,28 +1,28 @@
 
-<h1 class="text-center font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl">Experiencia</h1>
+<h1 class="tw-text-center tw-font-bold tw-text-4xl sm:tw-text-5xl md:tw-text-6xl lg:tw-text-7xl">Experiencia</h1>
     <br>
     <p-timeline [value]="dataExperience" align="alternate" styleClass="customized-timeline">
         <ng-template #marker let-event>
             <span 
-                class="flex items-center justify-center text-white rounded-full z-10 shadow-lg shadow-[rgb(103,232,249)] bg-[rgb(79, 79, 79)] 
-                w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14"
+                class="tw-flex tw-items-center tw-justify-center tw-text-white tw-rounded-full tw-z-10 tw-shadow-lg tw-shadow-[rgb(103,232,249)] tw-bg-[rgb(79, 79, 79)] 
+                tw-w-8 tw-h-8 sm:tw-w-8 sm:tw-h-8 md:tw-w-10 md:tw-h-10 lg:tw-w-12 lg:tw-h-12"
             >
-                <i class="pi pi-check text-sm sm:text-base md:text-lg lg:text-xl"></i>
+                <i class="pi pi-check tw-text-sm sm:tw-text-base md:tw-text-lg lg:tw-text-xl"></i>
             </span>
         </ng-template>
         <ng-template #content let-data>
-            <div class="flex flex-col mx-auto max-w-full md:max-w-md lg:max-w-lg">
+            <div class="tw-flex tw-flex-col tw-mx-auto tw-max-w-full md:tw-max-w-md lg:tw-max-w-lg">
                 <p-card 
-                    class="custom-card p-4 sm:p-6 md:p-8 lg:p-6"
+                    class="custom-card tw-p-4 sm:tw-p-6 md:tw-p-8 lg:tw-p-6"
                 >
-                    <ng-template #title> {{ data.Puesto }} </ng-template>
-                    <ng-template #subtitle> {{ data.Tiempo }} </ng-template>
-                    <p class="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">
+                    <ng-template #title class="tw-leading-relaxed"> {{ data.Puesto }} </ng-template>
+                    <ng-template #subtitle class="tw-leading-relaxed"> {{ data.Tiempo }} </ng-template>
+                    <p class="tw-text-sm sm:tw-text-base md:tw-text-lg lg:tw-text-xl tw-leading-relaxed">
                         {{ data.Descripcion }}
                     </p>
                     <a 
                         [href]="'mailto:' + data.Referencia" 
-                        class="text-[rgb(103,232,249)] hover:underline break-words text-sm sm:text-base md:text-lg lg:text-xl"
+                        class="tw-text-[rgb(103,232,249)] tw-hover:underline tw-break-words tw-text-sm sm:tw-text-base md:tw-text-lg lg:tw-text-xl"
                     >
                         {{ data.Referencia }}
                     </a>

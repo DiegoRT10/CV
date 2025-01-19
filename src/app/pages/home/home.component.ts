@@ -4,6 +4,7 @@ import { PanelModule } from 'primeng/panel';
 import { ExperienceComponent } from "../../components/experience/experience.component";
 import { EducationComponent } from "../../components/education/education.component";
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
+import { ContactComponent } from "../../components/contact/contact.component";
 
 
 @Component({
@@ -13,7 +14,8 @@ import { AnimateOnScrollModule } from 'primeng/animateonscroll';
     PanelModule,
     ExperienceComponent,
     EducationComponent,
-    AnimateOnScrollModule
+    AnimateOnScrollModule,
+    ContactComponent
 ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'

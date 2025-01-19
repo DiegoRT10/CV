@@ -1,0 +1,72 @@
+<h1 class="tw-text-center tw-font-bold tw-text-4xl sm:tw-text-5xl md:tw-text-6xl lg:tw-text-7xl">Contacto</h1>
+<br>
+<div class="tw-flex tw-flex-col tw-w-auto md:tw-items-start md:tw-justify-start md:tw-gap-2 ">
+    <div class="tw-inline-flex 
+                tw-justify-center 
+                tw-items-center 
+                tw-mb-2 
+                tw-cursor-pointer
+                tw-transition 
+                tw-ease-in-out 
+                tw-delay-0
+                hover:tw--translate-y-1 
+                hover:tw-scale-125  
+                tw-duration-300 
+                ">
+        <p-chip label="Correo" icon="pi pi-envelope" (click)="toggleExpandEmail()"
+            class="hover:tw-shadow-lg hover:tw-shadow-[rgb(103,232,249)]"></p-chip>
+        <a [hidden]="!isExpandedEmail" [href]="'mailto:' + correo"
+            class="tw-ml-2 tw-text-[rgb(103,232,249)] tw-hover:underline tw-break-words tw-text-sm sm:tw-text-base md:tw-text-lg lg:tw-text-xl tw-transition-all tw-duration-300 tw-opacity-0 tw-transform"
+            [ngClass]="{ 'tw-opacity-100 tw-translate-x-0': isExpandedEmail }">
+            {{ correo }}
+        </a>
+    </div>
+    <div class="tw-inline-flex 
+                tw-justify-center 
+                tw-items-center 
+                tw-mb-2 
+                tw-cursor-pointer
+                tw-transition 
+                tw-ease-in-out 
+                tw-delay-0
+                hover:tw--translate-y-1 
+                hover:tw-scale-125  
+                tw-duration-300 
+                ">
+        <p-chip label="Número" icon="pi pi-address-book" (click)="toggleExpandNumber()"
+            class="hover:tw-shadow-lg hover:tw-shadow-[rgb(103,232,249)]"></p-chip>
+        <a [hidden]="!isExpandedNumber" [href]="'tel:' + numero"
+            class="tw-ml-2 tw-text-[rgb(103,232,249)] tw-hover:underline tw-break-words tw-text-sm sm:tw-text-base md:tw-text-lg lg:tw-text-xl tw-transition-all tw-duration-300 tw-opacity-0 tw-transform"
+            [ngClass]="{ 'tw-opacity-100 tw-translate-x-0': isExpandedNumber }">
+            {{ numero }}
+        </a>
+    </div>
+    <div class="tw-inline-flex 
+                tw-justify-center 
+                tw-items-center 
+                tw-mb-2 
+                tw-cursor-pointer
+                tw-transition 
+                tw-ease-in-out 
+                tw-delay-0
+                hover:tw--translate-y-1 
+                hover:tw-scale-125  
+                tw-duration-300">
+    <p-chip 
+        label="Dirección" 
+        icon="pi pi-map-marker" 
+        (click)="toggleExpandAddress()"
+        class="hover:tw-shadow-lg hover:tw-shadow-[rgb(103,232,249)]"
+    ></p-chip>
+    <a 
+        [hidden]="!isExpandedAddress" 
+        [href]="'https://www.google.com/maps/search/?api=1&query=' + country" 
+        target="_blank"
+        rel="noopener noreferrer"
+        class="tw-ml-2 tw-text-[rgb(103,232,249)] tw-hover:underline tw-break-words tw-text-sm sm:tw-text-base md:tw-text-lg lg:tw-text-xl tw-transition-all tw-duration-300 tw-opacity-0 tw-transform"
+        [ngClass]="{ 'tw-opacity-100 tw-translate-x-0': isExpandedAddress }"
+    >
+        {{ direccion }}
+    </a>
+</div>
+</div>
