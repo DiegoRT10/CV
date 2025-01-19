@@ -5,6 +5,7 @@ import { ExperienceComponent } from "../../components/experience/experience.comp
 import { EducationComponent } from "../../components/education/education.component";
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 import { ContactComponent } from "../../components/contact/contact.component";
+import { SkillComponent } from "../../components/skill/skill.component";
 
 
 @Component({
@@ -15,7 +16,8 @@ import { ContactComponent } from "../../components/contact/contact.component";
     ExperienceComponent,
     EducationComponent,
     AnimateOnScrollModule,
-    ContactComponent
+    ContactComponent,
+    SkillComponent
 ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'

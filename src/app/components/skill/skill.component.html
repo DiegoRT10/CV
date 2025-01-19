@@ -1,0 +1,20 @@
+<h1 class="tw-text-center tw-font-bold tw-text-4xl sm:tw-text-5xl md:tw-text-6xl lg:tw-text-7xl">Habilidades</h1>
+<br>
+<div class="card">
+    <p-panel [toggleable]="true">
+        <ng-template #header>
+            <div class="tw-flex tw-items-center tw-gap-2">
+                    <p-avatar class="!tw-bg-red-600 !tw-w-4 !tw-h-4" shape="circle" />
+                    <p-avatar class="!tw-bg-yellow-600 !tw-w-4 !tw-h-4" shape="circle" />
+                    <p-avatar class="!tw-bg-green-600 !tw-w-4 !tw-h-4" shape="circle" />
+            </div>
+        </ng-template>
+        <div class="tw-font-mono tw-text-white tw-bg-black tw-p-4 tw-rounded">
+            <div *ngFor="let line of terminalLines">{{ line }}</div>
+            <span *ngIf="currentLine">
+              {{ currentLine }}
+              <span class="tw-animate-pulse">|</span>
+            </span>
+          </div>
+    </p-panel>
+</div>
