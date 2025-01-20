@@ -1,0 +1,15 @@
+<h1 class="tw-text-center tw-font-bold tw-text-3xl sm:tw-text-4xl md:tw-text-4xl lg:tw-text-6xl">Conocimientos</h1>
+<br>
+<div class="tw-flex tw-flex-wrap tw-gap-1 tw-justify-center tw-items-center">
+    @for (item of items; track $index) {
+        <div >
+                <p-chip [label]=item [image]="'../../../assets/img/'+item+'.png'" alt="Avatar image" />
+            </div>   
+    }
+</div>
+
+
+
+
+
+

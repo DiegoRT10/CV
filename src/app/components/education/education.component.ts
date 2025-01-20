@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { StepperModule } from 'primeng/stepper';
 import { ButtonModule } from 'primeng/button';
-import { CommonModule } from '@angular/common';
 import { CardModule } from 'primeng/card';
 
 @Component({

@@ -1,21 +1,19 @@
+<div class="md:tw-m-20 lg:tw-m-40 tw-mt-0.5 md:tw-mt-1 lg:tw-mt-2">
+    <div class="tw-container tw-mx-auto tw-pr-1">
+        <app-header (viewComplet)="focusExperience()"></app-header>
+        <br>
 
-    <div class="md:tw-m-20 lg:tw-m-40 tw-mt-0.5 md:tw-mt-1 lg:tw-mt-2">
-        <div class="tw-container tw-mx-auto tw-pr-1">
-            <app-header (viewComplet)="focusExperience()"></app-header>
-            <br>
-
-            <!-- Contenedor de dos columnas -->
-            <div #experienceSection 
-            class="tw-grid 
+        <!-- Contenedor de dos columnas -->
+        <div #experienceSection class="
+            tw-grid 
             sm:tw-grid-cols-1 
             sm:tw-gap-2 
             md:tw-grid-cols-3 
             md:tw-gap-4 
             lg:tw-grid-cols-3 
             lg:tw-gap-8">
-                <!-- Primera columna -->
-                <div [hidden]="!viewComplet" 
-                class="
+            <!-- Primera columna -->
+            <div [hidden]="!viewComplet" class="
                 sm:tw-col-span-1 
                 md:tw-col-span-1 
                 lg:tw-col-span-1
@@ -27,11 +25,14 @@
                 </div>
                 <div>
                     <app-skill></app-skill>
-                </div>    
                 </div>
-                <br>
-                <!-- Segunda columna -->
-                <div class="
+                <div>
+                    <app-knowledge></app-knowledge>
+                </div>
+            </div>
+            <br>
+            <!-- Segunda columna -->
+            <div class="
                 sm:tw-col-span-1 
                 md:tw-col-start-2 
                 md:tw-row-start-1 
@@ -44,21 +45,18 @@
                 lg:tw-space-y-20">
 
                 <div>
-                    <app-experience [hidden]="!viewComplet" 
-                        pAnimateOnScroll enterClass="animate-fadein" leaveClass="animate-fadeout" 
-                        class="animate-duration-1000">
+                    <app-experience [hidden]="!viewComplet" pAnimateOnScroll enterClass="animate-fadein"
+                        leaveClass="animate-fadeout" class="animate-duration-1000">
                     </app-experience>
                 </div>
-                    
+
                 <div>
-                    <app-education [hidden]="!viewComplet" 
-                        pAnimateOnScroll enterClass="animate-zoomin" leaveClass="animate-fadeout" 
-                        class="animate-duration-1000">
+                    <app-education [hidden]="!viewComplet" pAnimateOnScroll enterClass="animate-zoomin"
+                        leaveClass="animate-fadeout" class="animate-duration-1000">
                     </app-education>
                 </div>
-                    
-                </div>
+
             </div>
         </div>
     </div>
-
+</div>
