@@ -8,6 +8,7 @@ import { ContactComponent } from "../../components/contact/contact.component";
 import { SkillComponent } from "../../components/skill/skill.component";
 import { KnowledgeComponent } from "../../components/knowledge/knowledge.component";
 import { LenguageComponent } from "../../components/lenguage/lenguage.component";
+import { FooterComponent } from "../../components/footer/footer.component";
 
 
 @Component({
@@ -21,7 +22,8 @@ import { LenguageComponent } from "../../components/lenguage/lenguage.component"
     ContactComponent,
     SkillComponent,
     KnowledgeComponent,
-    LenguageComponent
+    LenguageComponent,
+    FooterComponent
 ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'

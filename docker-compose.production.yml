@@ -1,0 +1,11 @@
+version: '1'
+services:
+  frontend-angular-cv:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    container_name: frontend-mecv-app
+    environment:
+      - NODE_ENV=production
